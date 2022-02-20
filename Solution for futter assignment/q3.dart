@@ -1,6 +1,6 @@
 import 'dart:io';
 bool prime(int n){
-  if(n==1){
+  if(n==1||n==0){
     return false;
     }
   for(int i=2;i<n;i++){
@@ -15,10 +15,10 @@ bool prime(int n){
 }
 void main(){
   print("Enter the number of elements: ");
-  int n = int.parse(stdin.readLineSync());
+  int? n = int.parse(stdin.readLineSync()!);
   int sum=0;
   for(int j=1;j<=n;j++){
-   int j = int.parse(stdin.readLineSync());
+  int? j = int.parse(stdin.readLineSync()!);
    if(prime(j)){
      sum=sum+j;
    }
@@ -26,6 +26,6 @@ void main(){
   if(prime(sum) && sum!=0){
     print("Sum of prime elements is prime.");
   }else{
-    print("Sum of prime elements is not prime.");
+    print("Sum of prime elements is not prime.");}
   
   }

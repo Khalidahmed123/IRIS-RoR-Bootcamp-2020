@@ -2,7 +2,7 @@ import 'dart:io';
 bool Semiprime(int n){
   var arr=[];
   for(int i=2;i<n;i++){
-   If( n % i == 0){
+   if( n % i == 0){
      arr.add(i);
    }
   }
@@ -14,7 +14,7 @@ bool Semiprime(int n){
 }
 void main() {
 print("Enter a number:");
-int n = int.parse(stdin.readLineSync());
+  int? n = int.parse(stdin.readLineSync()!);
 if(Semiprime(n)){
   print("Given number is semiprime.");
 }else{
@@ -25,4 +25,3 @@ if(Semiprime(n)){
   
 }
   
-}

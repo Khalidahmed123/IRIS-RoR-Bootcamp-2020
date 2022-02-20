@@ -1,7 +1,7 @@
 import 'dart:io';
 main(){
   print("Enter the number of terms you want: ");
-  int n = int.parse(stdin.readLineSync());
+  int? n = int.parse(stdin.readLineSync()!);
   fibb(n);
 }
 
